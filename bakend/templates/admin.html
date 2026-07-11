@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Panel</title>
+</head>
+
+<body>
+<style>
+body{
+    font-family: Arial;
+    background: #f4f6f8;
+    padding: 20px;
+}
+
+form{
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+input{
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+button{
+    padding: 8px 15px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+</style>
+    <h1>FAQ Admin Panel</h1>
+
+    <h3>Add New FAQ</h3>
+
+    <form method="POST">
+
+        <input type="text" name="question" placeholder="Enter Question">
+
+        <br><br>
+
+        <input type="text" name="answer" placeholder="Enter Answer">
+
+        <br><br>
+
+        <button type="submit">Add FAQ</button>
+
+    </form>
+<hr>
+
+<h3>All FAQs</h3>
+
+{% for faq in faqs %}
+
+<p>
+    <b>Question:</b> {{ faq[1] }}
+</p>
+
+<p>
+    <b>Answer:</b> {{ faq[2] }}
+</p>
+<a href="/edit/{{ faq[0] }}">
+    <button type="button">Edit</button>
+</a>
+<form action="/delete/{{ faq[0] }}" method="POST">
+    <button type="submit">Delete</button>
+</form>
+<hr>
+
+{% endfor %}
+</body>
+
+</html>

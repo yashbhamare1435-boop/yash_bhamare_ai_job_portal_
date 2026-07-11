@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analytics</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f6f8;
+            padding:30px;
+        }
+
+        h1{
+            text-align:center;
+            color:#333;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:white;
+            margin-top:30px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        th{
+            background:#2196F3;
+            color:white;
+            padding:12px;
+        }
+
+        td{
+            padding:12px;
+            text-align:center;
+            border-bottom:1px solid #ddd;
+        }
+
+        tr:hover{
+            background:#f5f5f5;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:20px;
+            padding:10px 20px;
+            background:#4CAF50;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+        }
+
+        #questionChart{
+            background:white;
+            padding:15px;
+            border-radius:10px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+
+</head>
+
+<body>
+
+<h1>📊 Chat Analytics</h1>
+
+<canvas id="questionChart"></canvas>
+
+<table>
+
+<tr>
+    <th>Question</th>
+    <th>Times Asked</th>
+</tr>
+
+{% for q in questions %}
+
+<tr>
+    <td>{{ q[0] }}</td>
+    <td>{{ q[1] }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/dashboard" class="btn">
+    Back to Dashboard
+</a>
+
+<script>
+
+const labels = [
+{% for q in questions %}
+"{{ q[0] }}",
+{% endfor %}
+];
+
+const values = [
+{% for q in questions %}
+{{ q[1] }},
+{% endfor %}
+];
+
+const ctx = document.getElementById("questionChart").getContext("2d");
+
+new Chart(ctx, {
+    type: "bar",
+    data: {
+        labels: labels,
+        datasets: [{
+            label: "Question Frequency",
+            data: values,
+            backgroundColor: [
+                "#4CAF50",
+                "#2196F3",
+                "#FF9800",
+                "#E91E63",
+                "#9C27B0",
+                "#009688",
+                "#795548",
+                "#607D8B"
+            ]
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+</script>
+
+</body>
+</html>

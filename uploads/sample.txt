@@ -1,0 +1,80 @@
+Company Name: Helpopedia Edutech Pvt. Ltd.
+
+Founder: Yash Vinod Bhamare CEO: Yash Vinod Bhamare Owner: Yash Vinod
+Bhamare
+
+Contact Number: 8766759847 Support Number: 8766759847 Email:
+support@helpopedia.com HR Email: hr@helpopedia.com Website:
+www.helpopedia.com
+
+Office Address: Pune, Maharashtra, India
+
+Office Timings: Monday-Friday: 9:00 AM - 6:00 PM Saturday: 10:00 AM -
+2:00 PM Sunday: Closed
+
+Mission: Provide affordable AI-powered education and business software.
+
+Vision: Become a leading AI EdTech company.
+
+Services: AI Chatbot Development Website Development Web Applications
+Python Development Flask Development Student Management System ERP
+Solutions Analytics Dashboard API Integration
+
+Technologies: Python, Flask, HTML, CSS, JavaScript, SQLite, MySQL, Git,
+GitHub, Gemini AI
+
+Plans: Basic - ₹499/month Standard - ₹999/month Premium - ₹1999/month
+
+Internship: Available Duration: 2 Months Certificate: Yes
+
+Payment: UPI, Debit Card, Credit Card, Net Banking
+
+FAQ: Q: What is your company name? A: Helpopedia Edutech Pvt. Ltd.
+
+Q: Who is the founder? A: Yash Vinod Bhamare.
+
+Q: Who is the CEO? A: Yash Vinod Bhamare.
+
+Q: What is your contact number? A: 8766759847.
+
+Q: Where is your office? A: Pune, Maharashtra, India.
+
+Q: What services do you provide? A: AI Chatbots, Web Development, Flask
+Applications, ERP Solutions, Student Management Systems and AI Software.
+
+Q: Which technologies do you use? A: Python, Flask, HTML, CSS,
+JavaScript, SQLite, MySQL, GitHub and Gemini AI.
+
+Q: Do you provide internships? A: Yes.
+
+Q: Internship duration? A: 2 Months.
+
+Q: Do you provide certificates? A: Yes.
+
+Q: What is the Basic Plan? A: ₹499/month.
+
+Q: What is the Standard Plan? A: ₹999/month.
+
+Q: What is the Premium Plan? A: ₹1999/month.
+
+Q: What payment methods are accepted? A: UPI, Credit Card, Debit Card
+and Net Banking.
+
+Q: Does the chatbot support PDF? A: Yes.
+
+Q: Does the chatbot support TXT? A: Yes.
+
+Q: Can businesses customize the chatbot? A: Yes.
+
+Q: What languages are supported? A: English, Hindi and Marathi.
+
+Q: What is your mission? A: Provide affordable AI software.
+
+Q: What is your vision? A: Become India’s leading AI EdTech company.
+
+Additional Supported Questions: Company location, founder, owner, CEO,
+pricing, office timings, internship, certificate, contact details,
+support, technologies, dashboard, analytics, chatbot, PDF upload, TXT
+upload, AI support, Flask, Python, SQLite, web development, ERP, student
+portal, attendance system, API integration, customer support, business
+hours, payment methods.

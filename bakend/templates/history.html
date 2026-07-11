@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat History</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f6f8;
+            margin:0;
+            padding:30px;
+        }
+
+        h1{
+            text-align:center;
+            color:#333;
+        }
+
+        .container{
+            max-width:1000px;
+            margin:auto;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:white;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+            border-radius:10px;
+            overflow:hidden;
+        }
+
+        th{
+            background:#2196F3;
+            color:white;
+            padding:15px;
+        }
+
+        td{
+            padding:15px;
+            border-bottom:1px solid #ddd;
+        }
+
+        tr:hover{
+            background:#f1f1f1;
+        }
+
+        .back{
+            margin-bottom:20px;
+        }
+
+        .back a{
+            text-decoration:none;
+        }
+
+        .btn{
+            background:#2196F3;
+            color:white;
+            padding:10px 18px;
+            border-radius:8px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="back">
+        <a href="/dashboard" class="btn">⬅ Dashboard</a>
+    </div>
+
+    <h1>💬 Chat History</h1>
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>User Message</th>
+            <th>Bot Reply</th>
+        </tr>
+
+        {% for chat in chats %}
+
+        <tr>
+
+            <td>{{ chat[0] }}</td>
+
+            <td>{{ chat[1] }}</td>
+
+            <td>{{ chat[2] }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+</body>
+</html>

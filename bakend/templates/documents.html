@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Documents</title>
+
+    <style>
+        body{
+            font-family:Arial;
+            background:#f4f6f8;
+            padding:30px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:white;
+        }
+
+        th,td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:left;
+        }
+
+        th{
+            background:#2196F3;
+            color:white;
+        }
+
+        tr:nth-child(even){
+            background:#f2f2f2;
+        }
+
+        h1{
+            text-align:center;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1>Uploaded Documents</h1>
+
+<table>
+
+<tr>
+    <th>ID</th>
+    <th>Filename</th>
+    <th>Uploaded Time</th>
+</tr>
+
+{% for doc in docs %}
+
+<tr>
+
+    <td>{{ doc[0] }}</td>
+    <td>{{ doc[1] }}</td>
+    <td>{{ doc[2] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

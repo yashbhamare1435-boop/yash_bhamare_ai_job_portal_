@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Embed Code Generator</title>
+</head>
+<body>
+
+<h1>Embed Your Chatbot</h1>
+
+<textarea rows="8" cols="80" readonly>{{ embed_code }}</textarea>
+
+<br><br>
+
+<button onclick="copyCode()">Copy Code</button>
+
+<script>
+function copyCode(){
+
+    let text = document.querySelector("textarea");
+
+    text.select();
+
+    document.execCommand("copy");
+
+    alert("Embed code copied!");
+}
+</script>
+
+</body>
+</html>

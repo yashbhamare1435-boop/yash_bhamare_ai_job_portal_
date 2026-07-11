@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="chat-container">
+
+    <h1>AI Customer Support Bot</h1>
+
+    <div class="chat-box" id="chatBox">
+    <div>Hello! How can I help you today?</div>
+</div>
+
+<div class="input-area">
+    <input type="text" id="userInput" placeholder="Type your message..." onkeypress="handleKey(event)">
+    <button onclick="sendMessage()">Send</button>
+</div>
+
+</div>
+<script>
+
+function sendMessage(){
+
+    let input = document.getElementById("userInput");
+
+    let chatBox = document.getElementById("chatBox");
+
+    let message = input.value;
+
+    if(message === ""){
+        return;
+    }
+
+    chatBox.innerHTML += "<div class='user-message'>" + message + "</div>";
+    chatBox.scrollTop = chatBox.scrollHeight;
+    let typing = document.createElement("div");
+    typing.className = "bot-message";
+    typing.id = "typing";
+    typing.innerHTML = "Bot is typing...";
+    chatBox.appendChild(typing);
+
+    chatBox.scrollTop = chatBox.scrollHeight;
+    fetch("/chat", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        message: message
+    })
+})
+.then(response => response.json())
+.then(data => {
+
+    document.getElementById("typing").remove();
+
+    let time = new Date().toLocaleTimeString([], {
+        hour: '2-digit',
+        minute: '2-digit'
+    });
+
+    chatBox.innerHTML += `
+        <div class="bot-message">
+            <b>Bot:</b> ${data.reply}
+            <br>
+            <small>${time}</small>
+        </div>
+    `;
+
+    chatBox.scrollTop = chatBox.scrollHeight;
+});
+    input.value = "";
+}
+function handleKey(event){
+    if(event.key === "Enter"){
+        sendMessage();
+    }
+}
+
+</script>
+</body>
+</html>
