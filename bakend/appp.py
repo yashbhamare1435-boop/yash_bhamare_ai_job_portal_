@@ -21,7 +21,7 @@ else:
     model = None
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("login.html")
 
 # HOME
 @app.route("/login", methods=["GET", "POST"])
